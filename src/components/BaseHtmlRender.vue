@@ -16,14 +16,14 @@ function mouseup(e) {
   let selectionText = window.win().getSelection().toString()
   // console.log(selectionText)
   if (selectionText) {
-    let r = selectionText.match(/([A-Za-z0-9+/=]+)/g)
-    if (r) {
+    //let r = selectionText.match(/([A-Za-z0-9+/=]+)/g)
+    //if (r) {
       // console.log('base64', r, e)
       // console.log(e.pageX)
       // console.log(e.pageY)
-      if (r[0].length < 4) return
-      eventBus.emit(CMD.SHOW_TOOLTIP, {text: r[0], e})
-    }
+    //  if (r[0].length < 4) return
+      eventBus.emit(CMD.SHOW_TOOLTIP, {text: selectionText, e})
+    //}
   }
 }
 
